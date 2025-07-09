@@ -1,0 +1,701 @@
+/* Qlik Sense Dark Mode Theme */
+:root {
+  --dark-bg: #090E16;
+  --dark-text: #e0e0e0;
+  --border-color: #333;
+  --scroll-thumb: #3a3a3a;
+  --scroll-track: #1a1a1a;
+  --highlight: rgba(38, 79, 120, 0.7);
+  --cursor-color: #ffffff;
+}
+/* Main container elements */
+section, aside, header, main, footer,
+.qv-panel, .qv-navbar, .qv-tabrow, .qv-left, .qv-right,
+.lui-layout, .lui-tab__content, .qv-object,
+.qv-visualization, .output-area,
+.accordion-dataconnectors .datasource,
+.lui-popover, .lui-tooltip,
+.lui-panel, .lui-box, .lui-tabrow, .lui-tab__content,
+.scripteditor-main .accordion, .scripteditor-main .accordion .card,
+.qv-object-content-container, .data-source, .accordion,
+.lui-popover, .section-header, .codearea-tabs, .lui-divider,
+.app-details-content,
+.app-details-content.options-bg-color,
+.qv-bnf-autocomplete-container,
+.qv-app-details-container,
+.codearea-bnf-autocomplete-hint-active,
+.lui-search .lui-search__search-icon,
+.lui-checkbox__check-text,
+.lui-search__clear-button,
+.qv-scripteditor-progressindicator .log,
+.qvfilebrowser,
+.qui-delayedModal,
+.bottom-pane-variables .toggle-section,
+.genericSelectDialog .dbSelections,
+.genericSelectDialog .field-part .table-container-panel,
+.genericSelectDialog .table-list li,
+.scripteditor-main .scripteditor-stage,
+.bottom-pane, .bottom-pane .section-row .section,
+.bottom-pane-progress-output .title-container,
+.bottom-pane-variables .title-container,
+.bottom-pane-variables .variable-row-wrapper,
+[data-testid="qs-sub-toolbar"],
+.lui-dialog .lui-dialog__header,
+.lui-dialog .lui-dialog__footer,
+.qv-panel-wrap,
+div[data-testid="script-toolbar-container"],
+div[data-panel][data-panel-collapsible="true"],
+button[data-testid="navigation-dropdown-button"],
+button[data-testid="toggle-preview"],
+button[data-testid="output-toggle"],
+[data-testid="table-picker"],
+.MuiInputBase-inputSizeSmall,
+.MuiAutocomplete-inputRoot,
+.MuiDataGrid-row--borderBottom .MuiDataGrid-filler,
+.connsdk-tablepanel__listitem,
+.connsdk-griddata__cell,
+.connsdk-griddata__header,
+.genericSelectDialog .table-panel,
+.uploaded-data-files .file-list,
+[data-testid="button-cancel-connection-modal"],
+[data-testid="test-connection-button"],
+[data-testid="alert-dialog-close-button"]
+{
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+  border-color: var(--border-color) !important;
+}
+/* Toolbar and navigation */
+#qs-toolbar-container > header {
+  border-bottom: 1px solid var(--border-color) !important;
+}
+.codearea-tabs .vtabs .tab-list .tabrow .vtabs-delete,
+.vtabs-move {
+  color: var(--dark-text) !important;
+}
+.codearea-tabs .vtabs .tab-list .selected .selected-token {
+  background-color: var(--dark-text) !important;
+}
+/* Modal dialogs */
+div[role="presentation"] > div[class*="paperClass"] {
+  background-color: var(--dark-bg) !important;
+}
+div[role="presentation"] svg {
+  fill: var(--dark-text) !important;
+  color: var(--dark-text) !important;
+}
+div[tabindex="-1"][style*="transform-origin"] {
+  background-color: var(--dark-bg) !important;
+}
+/* Dropdown menus */
+div[tabindex="-1"] ul span {
+  color: var(--dark-text) !important;
+}
+div[tabindex="-1"] ul div.fs-unmask,
+div[tabindex="-1"] ul button,
+div[tabindex="-1"] ul label {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+}
+/* Override inline var(--dark-text) backgrounds */
+[style*="background-color: rgb(255"],
+[style*="background: rgb(255"],
+[style*="background-color: var(--dark-text)"],
+[style*="background: var(--dark-text)"] {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+}
+/* Form elements */
+input, select, textarea,
+.lui-input, .lui-button, .lui-select, button[data-testid="script-create-connection-button"] {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+  border: 1px solid var(--border-color) !important;
+}
+.lui-disabled, [disabled], [aria-disabled="true"] {
+  background-color: var(--dark-bg) !important;
+  color: #666 !important;
+}
+/* List items and autocomplete */
+.lui-list__item, .qv-global-object-list__item,
+.codearea-bnf-autocomplete-hint {
+  background-color: var(--dark-bg) !important;
+  color: #ccc !important;
+  border-bottom:1px solid var(--border-color) !important;
+}
+.qv-bnf-autocomplete-container .hint-help-container .hint-help-content .syntax {
+  color: var(--dark-text) !important;
+}
+.qv-bnf-autocomplete-container .hint-help-container .hint-help-content {
+  background-color: var(--dark-bg) !important;
+}
+/* Script editor panels */
+.scripteditor-main .scripteditor-history .accordion.divider,
+.scripteditor-main .scripteditor-right .accordion.divider,
+#qs-toolbar-container, .scripteditor-main-top,
+.section-header, .scripteditor-history, .accordion h4 {
+  border-color: var(--border-color) !important;
+}
+.lui-fade-button,
+.codearea-tabs .sections-title-container .title,
+.scripteditor-main .scripteditor-history .accordion h4,
+.scripteditor-main .scripteditor-right .accordion h4,
+div[role="tablist"] * {
+  color: var(--dark-text) !important;
+  background-color: var(--dark-bg) !important;
+}
+#tab-nav-analysis {
+  border-right:1px solid var(--border-color) !important;
+}
+#tab-nav-data {
+  border-left:1px solid var(--border-color) !important;
+  border-right:1px solid var(--border-color) !important;
+}
+/* Search and input fields */
+.codearea-tabs .vtabs .tab-list .tabrow .vtabs-title input,
+.lui-search .lui-search__input {
+  background: var(--dark-bg) !important;
+  color: #595959;
+  border: none !important;
+}
+/* Scrollbars */
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--scroll-track);
+}
+/* CodeMirror editor styling */
+.CodeMirror, .CodeMirror-scroll, .CodeMirror-gutters {
+  background-color: var(--dark-bg) !important;
+  color: #dcdcdc !important;
+}
+.CodeMirror-gutters {
+  border-right: 1px solid var(--border-color) !important;
+}
+.CodeMirror-selected {
+  background-color: var(--highlight) !important;
+}
+.CodeMirror-cursor {
+  border-left: 1px solid var(--cursor-color) !important;
+}
+.CodeMirror-activeline-background {
+  background: #2a2d2e !important;
+}
+.CodeMirror-linenumber {
+  color: #26B2F5 !important;
+}
+/* Syntax highlighting */
+.cm-keyword   { color: #569CD6 !important; }
+.cm-variable  { color: #9CDCFE !important; }
+.cm-number    { color: #B5CEA8 !important; }
+.cm-string    { color: #CE9178 !important; }
+.cm-comment   { color: #6A9955 !important; font-style: italic !important; }
+.cm-builtin   { color: #DCDCAA !important; }
+.cm-table     { color: #c9c !important; }
+.cm-operator  { color: #D4D4D4 !important; }
+.cm-def       { color: #DCDCAA !important; }
+.cm-meta      { color: #C586C0 !important; }
+.cm-searching { background-color: #3c3c3c !important; color: #C96 !important; }
+.cm-current { background-color: #005f87 !important; color: #C96 !important; }
+/* Icons and images */
+img[src*="connectors/logos/qlik_generic.svg"],
+img[src*="qlik_generic.svg"],
+img[src*="/logos/qlik"] {
+  filter: brightness(0) invert(1) !important;
+  opacity: 1 !important;
+}
+/* Load data button */
+button[title*="Load data"],
+button[data-testid="4e4c4d"] {
+  background-color: #044E3D !important;
+  color: var(--dark-text) !important;
+  border: 1px solid #044E3D !important;
+  box-shadow: none !important;
+}
+button[title*="Load data"]:hover,
+button[data-testid="4e4c4d"]:hover {
+  background-color: #036C4E !important;
+}
+/* Dialog tables */
+.genericSelectDialog .field-part td {
+  border: 1px solid var(--border-color) !important;
+  color: var(--dark-text) !important;
+}
+.genericSelectDialog .field-part th {
+  border-bottom: 1px solid var(--border-color) !important;
+  border-right: 1px solid var(--border-color) !important;
+}
+.genericSelectDialog .scriptpreview {
+  color: var(--dark-text) !important;
+}
+.genericSelectDialog .scriptpreviewcontainer {
+  border: 1px solid var(--border-color) !important;
+}
+.tableInfo
+{
+  color: var(--dark-text) !important;
+}
+.genericSelectDialog .table-panel {
+  background-color: var(--dark-bg) !important;
+  border: 1px solid var(--border-color);
+}
+.genericSelectDialog .title {
+  color: var(--dark-text);
+}
+.codearea-tabs .vtabs .tab-list .tabrow .vtabs-error {
+  color: #e64e4e !important;
+}
+/* Iframe dark mode styles */
+.qlik-dark-iframe input,
+.qlik-dark-iframe select,
+.qlik-dark-iframe textarea,
+.qlik-dark-iframe div {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+  border-color: var(--border-color) !important;
+}
+.qlik-dark-iframe .connsdk-connect-dialog-host__dialog__header__title {
+  color: var(--dark-text) !important;
+}
+.qv-codearea-current-debug-line
+{
+  background-color: #444444 !important;
+}
+.qv-codearea-breakpoint-marker-enabled
+{
+  color:var(--dark-text) !important;
+}
+.bottom-pane-breakpoints .breakpoints .breakpoint {
+  border-bottom: 1px solid var(--border-color) !important;
+}
+.search-matches
+{
+  color:var(--dark-text) !important;
+}
+.debugger-view .limited-load-controllers, .debugger-view .debugger-controllers {
+  border-left: 1px solid var(--border-color) !important;
+}
+/* /* May 2025 version adjustments */
+div[data-testid="script-toolbar-container"] button
+{
+  border:none;
+  background-color: transparent;
+  color: inherit;
+}
+li[data-testid="editor-section-list-item"]
+{
+  background-color: var(--dark-bg) !important;
+}
+.qlik-dark-resize-handle,
+div[data-resize-handle]
+{
+  /* background-color: var(--dark-bg) !important;  	 */
+  color: var(--dark-text) !important;
+}
+/* Second separator: apply border-left */
+div[role="separator"][aria-controls=":r8:"] {
+  border-left: 1px solid var(--border-color) !important;
+}
+hr {
+  border-color: var(--border-color) !important;
+}
+input[data-testid="rename-section-input"]
+{
+  border:none !important;
+}
+ul.MuiList-root > div > li {
+  background-color: var(--dark-bg) !important;  /* Replace with desired color */
+  transition: background-color 0.3s ease;
+}
+/* Force dark background on the dropdown container */
+#navigation-dropdown-popover .MuiPaper-root {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7) !important;
+  /* padding: 8px 0; */
+}
+.lui-dialog, #preview-data-settings,#space-selector-list {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7) !important;
+  border:none !important;
+}
+/* Subheaders like "Home", "Analyze" */
+#navigation-dropdown-popover .MuiListSubheader-root {
+  color: var(--dark-text) !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  /* padding: 10px 16px 4px 16px; */
+}
+/* List item buttons */
+#navigation-dropdown-popover .MuiListItemButton-root {
+  color: var(--dark-text) !important;
+  /* padding: 10px 16px !important; */
+  border-radius: 6px !important;
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+/* Hover/active state */
+#navigation-dropdown-popover .MuiListItemButton-root:hover {
+  background-color: #1f2229 !important;
+}
+/* Selected (active) item – highlight with accent */
+#navigation-dropdown-popover .Mui-selected {
+  border-left: 3px solid #00e676 !important;
+  background-color: #1c1f26 !important;
+  /* padding-left: 13px !important; /* compensate for border */
+}
+/* Icon color fix */
+#navigation-dropdown-popover .MuiListItemIcon-root svg {
+  fill: var(--dark-text) !important;
+  opacity: 0.9;
+  margin-right: 12px;
+}
+/* Text */
+#navigation-dropdown-popover .MuiListItemText-root {
+  color: var(--dark-text) !important;
+  font-size: 14px;
+}
+/* Disabled items */
+#navigation-dropdown-popover .Mui-disabled {
+  color: #777 !important;
+  opacity: 0.4 !important;
+}
+/* Hide secondary icon (e.g. open in new tab) if not needed */
+#navigation-dropdown-popover .MuiListItemSecondaryAction-root {
+  display: none !important;
+}
+svg {
+  color: var(--dark-text) !important;
+  fill: var(--dark-text) !important;
+}
+.MuiDialog-paper, .MuiDialogActions-root {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7) !important;
+}
+button[data-testid="confirm-cancel-btn"] {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+  border: 1px solid var(--border-color) !important;
+  transition: background-color 0.2s ease;
+}
+[data-testid="message-container"] * {
+  color: var(--dark-text) !important;
+}
+.MuiDialogContent-root div[data-testid="message-container"] {
+  border:1px solid var(--border-color) !important;
+}
+div[data-testid="app-details-wrapper"]
+{
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+  border: 1px solid var(--border-color) !important;
+}
+[data-testid="app-details-wrapper"] h5,
+[data-testid="app-details-wrapper"] h6,
+[data-testid="app-details-wrapper"] p,
+[data-testid="app-details-wrapper"] span,
+[data-testid="app-details-wrapper"] button,
+[data-testid="app-details-wrapper"] svg {
+  color: var(--dark-text) !important;
+  fill: var(--dark-text) !important;
+}
+/* Load data button */
+button[data-testid="export-data-button"] {
+  background-color: #044E3D !important;
+  color: var(--dark-text) !important;
+  border: 1px solid #044E3D !important;
+  box-shadow: none !important;
+}
+button[data-testid="export-data-button"]:hover {
+  background-color: #036C4E !important;
+}
+.MuiBox-root h6
+{
+  color:var(--dark-text) !important;
+}
+/* Target Qlik's DataGrid table */
+.MuiDataGrid-root {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+  border-color: var(--border-color) !important;
+}
+/* Column headers */
+.MuiDataGrid-columnHeaders,
+.MuiDataGrid-columnHeader {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+  border-color: var(--border-color) !important;
+}
+/* Header separator lines */
+.MuiDataGrid-columnSeparator {
+  color: var(--border-color) !important;
+  border-color: var(--border-color) !important;
+}
+/* Cells */
+.MuiDataGrid-cell {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+  border-color: var(--border-color) !important;
+}
+/* Scrollbars */
+.MuiDataGrid-scrollbar,
+.MuiDataGrid-scrollbarContent {
+  background-color: var(--dark-bg) !important;
+}
+/* Optional: remove row hover background if it's bright */
+.MuiDataGrid-row:hover {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+/* Menu/Icons inside column headers */
+.MuiDataGrid-iconButtonContainer,
+.MuiDataGrid-menuIcon,
+.MuiDataGrid-sortIcon {
+  color: var(--dark-text) !important;
+  fill: var(--dark-text) !important;
+}
+.MuiDataGrid-withBorderColor {
+  border-color: var(--border-color) !important;
+}
+.MuiDataGrid-menu > div {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+}
+.MuiListItemText-primary {
+  color: var(--dark-text) !important;
+}
+/* Main container and table background */
+[data-panel-id] {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+}
+/* Table headers */
+[data-panel-id] thead th,
+[data-panel-id] thead th div,
+[data-panel-id] thead span,
+[data-panel-id] th[aria-label] {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+  border-color: var(--border-color) !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+/* Table body cells */
+[data-panel-id] td,
+[data-panel-id] td div {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+  border-color: var(--border-color) !important;
+  opacity: 1 !important;
+}
+/* Ensure icons and SVGs are visible */
+[data-panel-id] svg,
+[data-panel-id] i,
+[data-panel-id] button {
+  fill: var(--dark-text) !important;
+  color: var(--dark-text) !important;
+  opacity: 1 !important;
+  /* background-color: var(--dark-bg) !important; */
+}
+/* Force border grid */
+[data-panel-id] td,
+[data-panel-id] th {
+  border: 1px solid var(--border-color) !important;
+}
+/* Optional: Row hover */
+[data-panel-id] tr:hover {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+[data-panel-id=":rf:"]  > div:first-of-type {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+}
+.MuiToggleButtonGroup-firstButton,.MuiToggleButtonGroup-middleButton,.MuiToggleButtonGroup-lastButton
+{
+  background:none !important;
+}
+/* Target Qlik field profile card container */
+[data-testid="field-profile-card"] {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+  border: 1px solid var(--border-color) !important;
+}
+/* Ensure all text inside also uses dark mode colors */
+[data-testid="field-profile-card"] * {
+  color: var(--dark-text) !important;
+}
+/* Optional: style the bottom section showing "Distinct values" */
+[data-testid="field-profile-card-distinct-values"] {
+  color: var(--dark-text) !important;
+}
+/* Optional: style card title if needed */
+[data-testid="field-profile-card-name"] {
+  color: var(--dark-text) !important;
+}
+.MuiMenuItem-gutters {
+  color:var(--dark-text) !important;
+}
+div[data-testid="loading-code-area"], div[data-testid="loading-code-area"] div
+{
+  background-color: var(--dark-bg) !important;
+}
+.MuiButton-colorSuccess {
+  background-color: #044E3D !important;
+  color: var(--dark-text) !important;
+  border: 1px solid #044E3D !important;
+  box-shadow: none !important;
+}
+.MuiTablePagination-toolbar, .MuiInputLabel-outlined {
+  color: var(--dark-text) !important;
+}
+.MuiDataGrid-virtualScroller {
+  background-color: var(--dark-bg) !important;
+}
+button.Mui-disabled
+{
+  background-color: var(--dark-bg) !important;
+  color: #666 !important;
+  -webkit-text-fill-color: #666 !important;
+  border-color: var(--border-color) !important;
+}
+.Mui-disabled
+{
+  color: rgb(64, 64, 64) !important;
+  -webkit-text-fill-color: rgb(64, 64, 64) !important;
+}
+.Mui-disabled svg
+{
+  color: #666 !important;
+  fill: #666 !important;
+}
+.MuiAccordionDetails-root , .MuiAccordion-rounded {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+}
+.MuiAccordionDetails-root ul li:hover {
+  background:background-color: var(--dark-bg) !important;
+}
+.next-line-container {
+  background-color: var(--dark-bg) !important;
+}
+.MuiInputBase-adornedStart {
+  background-color: var(--dark-bg) !important;
+}
+svg.space-image_shared, svg.space-image_personal,svg.space-image_data,svg.space-image_managed {
+  background-color: transparent !important;
+}
+[data-testid="editor-container"] > div[data-panel-group] > div:nth-of-type(2) {
+  background-color: var(--dark-bg) !important;
+  border-top:1px solid var(--border-color) !important;
+}
+.MuiGrid-root .MuiToggleButton-standard {
+  background-color: var(--dark-bg) !important;
+}
+p.MuiTypography-root
+{
+  color: var(--dark-text) !important;
+}
+[id*="pendo"] {
+  color: var(--dark-text) !important;
+}
+[data-testid*="notification-icon"], li.notification-center-notification-row:hover, li.notification-center-notification-row:active {
+  background-color: var(--dark-bg) !important;
+}
+.notification-center-header {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+}
+[data-testid="top-bar-breadcrumb"] > div {
+  color: var(--dark-text) !important;
+}
+[data-testid="script-editor-container"] > .MuiGrid-container {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+}
+[data-panel] > .MuiGrid-root.MuiGrid-container {
+  background-color: var(--dark-bg) !important;
+}
+[aria-label="Details"] {
+  background-color: var(--dark-bg) !important;
+}
+[data-testid="details-thumbnail-app"] {
+  border:1px solid var(--border-color) !important;
+}
+div[class*="dataprep"] > table {
+  border-top:1px solid var(--border-color) !important;
+}
+[data-testid="search-input-scripteditor-search-replace-search-input"], [data-testid="search-input-scripteditor-search-replace-replace-input"] {
+  background-color: var(--dark-bg) !important;
+}
+[data-testid="search-replace-replace-button"], [data-testid="search-replace-replace-all-button"] {
+  background-color: var(--dark-bg) !important;
+  border:1px solid var(--border-color) !important;
+}
+.MuiGrid-container:has(> img[src*="app.svg"]) {
+  background-color: var(--dark-bg) !important;
+}
+.MuiToggleButtonGroup-grouped.Mui-selected {
+  color: var(--dark-text) !important;
+  border:1px solid var(--border-color) !important;
+}
+[data-testid="script-section-search-hits"] > .MuiBadge-colorWarning {
+  background-color: var(--dark-bg) !important;
+}
+[title^="Hide"], [title^="Turn off"], [aria-pressed="true"] {
+  background-color: #0e639c !important;
+}
+#tab-nav-story.tab-nav-story {
+  border-right: 1px solid var(--border-color) !important;
+}
+[data-testid="add-data-from-catalog"] > span > div {
+  background-color: #044E3D !important;
+}
+.lui-checkbox .lui-checkbox__input:checked + .lui-checkbox__check-wrap .lui-checkbox__check, .lui-checkbox .lui-checkbox__input:indeterminate + .lui-checkbox__check-wrap .lui-checkbox__check {
+  background-color: #044E3D !important;
+}
+.upload-drop-zone, .store-status {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+}
+[data-testid="create-connection-create-button"] {
+  border: 1px solid var(--border-color) !important;
+}
+#back-button {
+  color:var(--dark-text);
+}
+.MuiDrawer-paperAnchorDockedLeft {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+  border: 1px solid var(--border-color) !important;
+}
+div[data-testid="platform-navigator-drawer"] > div:first-of-type {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+  border: 1px solid var(--border-color) !important;
+}
+[data-testid="platform-navigator-second-level"] {
+  scrollbar-width:auto !important;
+}
+[data-testid="modal.buttons.close"], [data-testid="app-details-cancel-btn"], [data-testid="media-library-toggle-upload"], [data-testid="media-library-close"], [data-testid="Dialog-Content"] {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+  border: 1px solid var(--border-color) !important;
+}
+[data-testid="modal.backdrop"] > div:first-of-type {
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-text) !important;
+}
+[data-testid="app-settings-dialog-content"] > div > div > p{
+  color: var(--dark-text) !important;
+}
+#app-switcher-logout > div > span,  [data-testid="profileMenu"] > div > div > button {
+  color: var(--dark-text) !important;
+}

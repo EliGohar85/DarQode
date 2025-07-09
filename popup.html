@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DarQode - Dark Theme for Data Load Editor</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #192331;
+      color: #e0e0e0;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .logo {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+    
+    h1 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: #ffffff;
+      line-height: 1.3;
+    }
+    
+    .subtitle {
+      font-size: 12px;
+      color: #9ca3af;
+      margin-top: 4px;
+    }
+    
+    .disclaimer {
+      font-size: 10px;
+      color: #6b7280;
+      margin-top: 6px;
+      font-style: italic;
+    }
+    
+    .toggle-section {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    
+    .toggle-button {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #26B2F5 0%, #1e90ff 100%);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      outline: none;
+    }
+    
+    .toggle-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(38, 178, 245, 0.3);
+    }
+    
+    .toggle-button:focus {
+      outline: 2px solid rgba(38, 178, 245, 0.5);
+      outline-offset: 2px;
+    }
+    
+    .toggle-button:active {
+      transform: translateY(0);
+    }
+    
+    .toggle-button.disabled {
+      background: #374151;
+      cursor: not-allowed;
+    }
+    
+    .toggle-button.disabled:hover {
+      transform: none;
+      box-shadow: none;
+    }
+    
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: #9ca3af;
+      margin-top: 12px;
+    }
+    
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ef4444;
+      flex-shrink: 0;
+    }
+    
+    .status-dot.active {
+      background: #10b981;
+    }
+    
+    .info-section {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 16px;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    
+    .info-title {
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0 0 0;
+    }
+    
+    .feature-list li {
+      padding: 4px 0;
+      color: #9ca3af;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    
+    .feature-list li:before {
+      content: "✓";
+      color: #10b981;
+      font-weight: bold;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    
+    .loading {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border: 2px solid #374151;
+      border-radius: 50%;
+      border-top-color: #26B2F5;
+      animation: spin 1s ease-in-out infinite;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    .error {
+      color: #ef4444;
+      font-size: 11px;
+      margin-top: 8px;
+      padding: 8px;
+      background: rgba(239, 68, 68, 0.1);
+      border-radius: 6px;
+      border: 1px solid rgba(239, 68, 68, 0.2);
+    }
+
+    .version {
+      text-align: center;
+      font-size: 10px;
+      color: #6b7280;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+	  <img src="logo.png" alt="DarQode logo" style="width:80px" />
+	</div>
+    <div class="subtitle">Dark Theme for Qlik Data Load Editor</div>
+    <div class="disclaimer">Not affiliated with or endorsed by Qlik</div>
+  </div>
+  
+  <div class="toggle-section">
+    <button id="toggleButton" class="toggle-button" aria-label="Toggle dark theme">
+      <span class="loading" id="loading" aria-hidden="true"></span>
+      <span id="buttonText">Loading...</span>
+    </button>
+    
+    <div class="status" role="status" aria-live="polite">
+      <div class="status-dot" id="statusDot" aria-hidden="true"></div>
+      <span id="statusText">Checking status...</span>
+    </div>
+    
+    <div id="errorMessage" class="error" style="display: none;" role="alert"></div>
+  </div>
+  
+  <div class="info-section">
+    <div class="info-title">Features</div>
+    <ul class="feature-list">
+      <li>Dark theme for Qlik data load editor interface</li>
+      <li>Enhanced syntax highlighting for code</li>
+      <li>Dark styling for dialogs and form elements</li>
+      <li>Auto-detection of data load editor pages</li>
+      <li>Floating toggle button for quick access</li>
+      <li>Support for both On-Premise and Cloud environments</li>
+    </ul>
+  </div>
+
+  <div class="version">
+    Version 1.0.0
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
