@@ -6,8 +6,7 @@
   "author": "Eli Gohar",
   "permissions": [
     "activeTab",
-    "storage",
-    "scripting"
+    "storage"
   ],
   "host_permissions": [
 	"*://*/dataloadeditor*"
