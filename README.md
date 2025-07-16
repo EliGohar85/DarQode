@@ -52,7 +52,7 @@ All trademarks, including “Qlik” and “Qlik Sense,” are the property of t
 ## 🧩 Installation
 
 ### From Chrome Web Store (Recommended)
-> *Coming soon – under review.*
+🛒 **[Install DarQode from Chrome Web Store](https://chromewebstore.google.com/detail/lcdeekeamnlnehjedohcijcaoadgiboe?utm_source=item-share-cb)**
 
 ### Manual Installation (Developer Mode)
 1. Download or clone this repository
