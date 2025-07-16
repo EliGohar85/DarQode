@@ -202,7 +202,7 @@ Still having trouble?
 📧 Contact me at [eligohar85@gmail.com](mailto:eligohar85@gmail.com)  
 💬 Or reach out on [LinkedIn](https://www.linkedin.com/in/eligohar)
 
-> 💡 The GitHub project will be available soon.
+> 🌍 Check the GitHub project: https://github.com/EliGohar85/DarQode
 
 ---
 
