@@ -1,6 +1,6 @@
 # Privacy Policy for DarQode
 
-DarQode is a Chrome Extension that enables dark mode for Qlik Sense Data Load Editor.
+DarQode is a browser extension that enables dark mode for Qlik Sense Data Load Editor.
 
 This extension does **not collect, store, or transmit** any personal data or user information.
 
